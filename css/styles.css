@@ -37,6 +37,7 @@ li {
 
 img {
     width: 100%;
+    display: block;
 }
 
 .apply {
@@ -96,7 +97,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .sports-text h3 {
@@ -127,4 +128,46 @@ footer li {
 
 footer p {
     font-size: 1.3rem;
+}
+
+@media (min-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 10px;
+    }
+
+    .text-overlay {
+        font-size: 2.4rem;
+        padding: 8rem;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .grid-item {
+        border: 1px solid lightgrey;
+        border-radius: 3px;
+    }
+
+    grid-item img {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .sports {
+        display: flex;
+    }
+
+    .sports > div {
+        flex:  1;
+    }
+
+    footer ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
